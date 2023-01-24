@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/image/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" type="text/css" href="assets/scss/main.css">
+</head>
+
+<body>
+
+  <main>
+    <div class="card survey">
+      <div class="icon">
+      </div>
+      <article>
+        <h2>How did we do?</h2>
+        <p>Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!</p>
+      </article>
+      <div class="rating">
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+      </div>
+      <button class="submit" type="button">SUBMIT</button>
+    </div>
+    <div class="card submitted d-none">
+      <img src="assets/image/illustration-thank-you.svg" alt="thanks">
+      <div class="rate">
+        <p>You selected <span></span> out of 5</p>
+      </div>
+      <article>
+        <h2>Thank you!</h2>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+@import "CDNs";
+@import "reset";
+@import "variables";
+
+body {
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    background-color: $natVeryDarkBlue;
+    display: grid;
+    place-content: center;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+h2 {
+    color: $natWhite;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+p {
+    color: $natMediumGrey;
+}
+
+.card {
+    background-color: $card;
+    width: 350px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+%circular {
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: $natDarkBlue;
+    $iconSize: 15px;
+    width: $iconSize;
+    height: $iconSize;
+}
+
+.icon {
+    @extend %circular;
+    background-image: url("../image/icon-star.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.submitted {
+    align-items: center;
+    text-align: center;
+    img {
+        width: fit-content;
+    }
+    p {
+        max-width: 35ch;
+    }
+}
+
+.d-none {
+    display: none;
+}
+
+.rating {
+    > ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        li {
+            @extend %circular;
+            color: $natLightGrey;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            line-height: 1.2;
+            cursor: pointer;
+            &:hover {
+                background-color: $natMediumGrey;
+                color: $natWhite;
+            }
+            &:active {
+                background-color: $prmOrange;
+                color: $natWhite;
+            }
+        }
+    }
+}
+
+.submit {
+    border: none;
+    cursor: pointer;
+    border-radius: 50rem;
+    height: 40px;
+    background-color: $prmOrange;
+    font-weight: 700;
+    color: $natWhite;
+    padding-top: 0.2rem;
+    &:hover {
+        background-color: $natWhite;
+        color: $prmOrange;
+    }
+}
+
+.rate {
+    background-color: $natDarkBlue;
+    border-radius: 50rem;
+    padding: 5px 15px 3px 15px;
+
+    p {
+        color: $prmOrange;
+    }
+}
+
+@import 'media';
